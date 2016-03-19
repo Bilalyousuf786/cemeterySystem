@@ -1,0 +1,33 @@
+
+
+<div ng-controller="CaretakerListController">
+
+    <h1><b>Caretaker List</b></h1>
+
+<table>
+    <tr>
+        <th><b>First Name</b></th>
+        <th><b>Last Name</b></th>
+        <th><b>Contact No.</b></th>
+        <th><b>Address</b></th>
+
+    </tr>
+
+    <tr ng-repeat="aa in ctrl.data | startFrom:ctrl.currentPage*ctrl.pageSize | limitTo:ctrl.pageSize">
+        <td>{{aa.firstName}}</td>
+        <td>{{aa.lastName}}</td>
+        <td>{{aa.contactNo}}</td>
+        <td>{{aa.address}}</td>
+    </tr>
+</table>
+
+
+    <button ng-disabled="ctrl.currentPage == 0" ng-click='ctrl.currentPage=ctrl.currentPage-1'>
+        Previous
+    </button>
+    {{ctrl.currentPage+1}}/{{ctrl.numberOfPages()}}
+    <button ng-disabled="ctrl.currentPage >= ctrl.data.length/ctrl.pageSize - 1" ng-click="ctrl.currentPage=ctrl.currentPage+1">
+        Next
+    </button>
+
+</div>

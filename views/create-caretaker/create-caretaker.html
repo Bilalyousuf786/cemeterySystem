@@ -1,0 +1,30 @@
+
+
+<div ng-controller="CreateCaretakerController">
+
+    <h1><b>Create CareTaker</b></h1>
+    <form ng-show="ctrl.formHide">
+
+        <input type="text" name="fName" placeholder="First Name" ng-model="ctrl.fName">
+        <input type="text" name="lName" placeholder="Last Name" ng-model="ctrl.lName">
+        <input type="email" name="email" placeholder="Email Address" ng-model="ctrl.email">
+        <input type="Password" name="pass" placeholder="Password" ng-model="ctrl.pass">
+        <textarea name="address" ng-model="ctrl.address" placeholder="Address">
+        </textarea>
+        <br><div style="text-align: left">
+        <label>Contact Number</label>
+        <input type="number" name="contactNo" placeholder="Contact Number" ng-model="ctrl.contactNo">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <label>C.N.I.C Number</label>
+        <input type="number" name="cnic" placeholder="C.N.I.C" ng-model="ctrl.cnic">
+        <br><br><label>Select Graveyard</label>
+        <select ng-model="ctrl.graveyard" ng-change="ctrl.graveId(ctrl.graveyard)">
+            <option ng-repeat="aa in ctrl.graveyardName">{{aa.graveyard_name}}</option>
+        </select>
+        </div>
+
+        <br><br>
+        <input type="submit" value="Create" ng-click="ctrl.caretaker_regis()">
+
+    </form>
+</div>

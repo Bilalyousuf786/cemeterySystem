@@ -1,0 +1,97 @@
+
+
+
+
+
+
+    <div ng-controller="BurialController">
+        <div>
+            <h1><b>Burial Registartion</b></h1>
+        </div>
+        <div>
+            <form name="burialReg" ng-hide="ctrl.showForm" style="text-align: left;">
+
+                <div>
+                <label>Select Grave :</label>
+                <select ng-model="ctrl.selectedGraveNo">
+                    <option ng-repeat="aa in ctrl.available_graves">{{aa.GraveNo}}</option>
+                </select>
+                    </div>
+
+                <input type="text" placeholder="Burial Full Name" name="burialName" ng-model="ctrl.burialName"><br>
+                <input type="text" placeholder="Burial Father Name" name="fatherName" ng-model="ctrl.fatherName"><br>
+                <div style="text-align: left">
+                    <label>
+                        Gender :
+                    </label>
+                <label>
+                    <input type="radio" name="gender" ng-model="ctrl.gender" value="male" checked>
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" ng-model="ctrl.gender" value="female">
+                    Female
+                </label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label>Age</label>
+                    <select name="burialAge" ng-model="ctrl.age">
+                        <option ng-repeat="age in ctrl.ageList">{{age}}</option>
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label>C.N.I.C Number  :</label>
+                    <input type="number" placeholder="Nic" name="cnic" ng-model="ctrl.cnic">
+                </div>
+                <div>
+                    <label>Current Date</label>
+                    <input type="date" name="date" ng-model="ctrl.date">
+                </div>
+
+                <br>
+                <div>
+                <label >Address</label>
+                <textarea name="address" ng-model="ctrl.address" placeholder="Address"><br>
+
+                </textarea>
+                    </div>
+
+                <hr>
+                <hr>
+                    <h3 style="text-align: center"><b>Next of Kin</b></h3>
+                <input type="text" name="kinName" ng-model="ctrl.kinName" placeholder="Full Name"><br>
+                <div style="text-align: left">
+                <label>C.N.I.C Number</label>
+                <input type="number" name="kinCnic" ng-model="ctrl.kinCnic" placeholder="C.N.I.C Number">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Phone Number</label>
+                <input type="number" name="kinCell" ng-model="ctrl.kinCell" placeholder="Phone Number"><br>
+                    </div>
+                <label>Address</label>
+                <textarea name="kinAddress" ng-model="ctrl.kinAddress" placeholder="Address"><br>
+
+                </textarea>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <canvas width="400" height="200" id="canvas"
+                            image-cropper image="ctrl.cropper.sourceImage"
+                            cropped-image="ctrl.cropper.croppedImage"
+                            crop-width="300" crop-height="200" keep-aspect="true"
+                            touch-radius="30" crop-area-bounds="ctrl.bounds"></canvas>
+                </div>
+                <input type="file" img-cropper-fileread image="ctrl.cropper.sourceImage" />
+
+                <br>
+                <br>
+                <div style="text-align: center">
+                <input type="submit" value="Add" ng-click="ctrl.burial_reg()">
+                    </div>
+            </form>
+
+            <h4 ng-show="ctrl.showForm">Loading Data.....</h4>
+        </div>
+    </div>
+

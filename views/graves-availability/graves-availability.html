@@ -1,0 +1,70 @@
+
+<div id="page-wrapper" class="contact">
+
+    <!-- Header -->
+
+    <header id="header" class="alt">
+        <nav id="nav">
+            <ul>
+
+                <li class="current"><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="grave_availability">Grave Availability</a></li>
+                <li><a ui-sref="sign-In">Sign In</a></li>
+                <li><a ui-sref="nextOfKin">Burial Details</a></li>
+                <li><a ui-sref="cdci">Death Certificate</a></li>
+                <li><a ui-sref="about-us">About Us</a></li>
+                <!--<li><a ui-sref="contact-us">Contact Us</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- Main -->
+    <article id="main">
+
+        <header class="special container">
+            <span class="icon fa-bar-chart-o"></span>
+            <h2>Space Avaibility</h2>
+
+        </header>
+
+        <!-- One -->
+        <section class="wrapper style4 special container 75%">
+
+            <!-- Content -->
+            <table style="...">
+
+                <tr>
+                    <th><b>Graveyards</b></th>
+                    <th><b>Occupied Space</b></th>
+                    <th><b>Available Space</b></th>
+                    <th><b>Total</b></th>
+                    <!--<th><b>Graveyard Map</b></th>-->
+                </tr>
+                <tr ng-repeat="bb in ctrl.graveYard_details">
+                    <td>{{bb.name}}</td>
+                    <td>{{bb.occupied}}</td>
+                    <td>{{bb.available}}</td>
+                    <td>{{bb.available + bb.occupied}}</td>
+                    <!--<td><a ui-sref="google-map"><button>View Map</button></a></td>-->
+                </tr>
+
+            </table>
+
+        </section>
+
+    </article>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+
+
+        <ul class="copyright">
+            <li>&copy; Created by M.Bilal Yousuf </li>
+        </ul>
+
+    </footer>
+
+</div>

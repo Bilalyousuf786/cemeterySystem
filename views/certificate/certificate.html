@@ -1,0 +1,66 @@
+
+
+
+<div>
+
+    <form name="certificateIssuance" ng-submit="ctrl.searchBdetails()">
+
+        <div style="text-align: left">
+        <label><b>Select Graveyard</b></label>
+    <select ng-model="ctrl.graveyard" ng-change="ctrl.graveId(ctrl.graveyard)" required>
+        <option ng-repeat="aa in ctrl.graveyardName">{{aa.graveyard_name}}</option>
+    </select>
+        </div>
+
+        <div style="text-align: left">
+            <br>
+        <label><b>Enter Key</b></label>
+    <input type="text" ng-model="ctrl.burialId" required placeholder="Enter Key">
+            </div>
+
+    <br><br>
+
+    <button type="submit" ng-disabled="certificateIssuance.$invalid">Search</button>
+    </form>
+
+    <div ng-hide="ctrl.hideDetails">
+        <table class="export-table">
+            <tr>
+                <th>Grave No</th>
+                <td>{{ctrl.bDetails.GraveNo}}</td>
+            </tr>
+            <tr>
+                <th>Burial Name</th>
+                <td>{{ctrl.bDetails.burialName}}</td>
+            </tr>
+            <tr>
+                <th>Father Name</th>
+                <td>{{ctrl.bDetails.fatherName}}</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>{{ctrl.bDetails.gender}}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ctrl.bDetails.age}}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ctrl.bDetails.date}}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ctrl.bDetails.address}}</td>
+            </tr>
+            <tr>
+                <th>Picture</th>
+                <td><img ng-src={{ctrl.bDetails.pic}}></td>
+            </tr>
+
+
+        </table>
+    </div>
+
+
+</div>

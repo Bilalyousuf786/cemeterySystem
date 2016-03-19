@@ -1,0 +1,114 @@
+
+<div id="page-wrapper" class="contact">
+
+
+
+    <!-- Main -->
+    <article id="main">
+
+        <header class="special container">
+            <span class="icon fa-bar-chart-o"></span>
+            <h2>Caretaker Dashboard</h2>
+
+        </header>
+
+        <!-- One -->
+        <section class="wrapper style4 special container 75%">
+
+            <!-- Content -->
+            <div ng-controller="CaretakerController">
+
+                <div style="text-align: right">
+                    <button ng-click="ctrl.logout()">Logout</button>
+                </div>
+
+
+                <br>
+                <br>
+
+                <div style="text-align: left;">
+
+                    <button>
+                        <a ui-sref="caretaker.create-graves">Create Graves</a>
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button >
+                        <a ui-sref="caretaker.burial-reg">Burial Registration</a>
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <button>
+                        <a ui-sref="caretaker.burialDetails">Burial Details</a>
+                    </button>
+
+
+                </div>
+
+                <br>
+                <hr><hr>
+
+
+                <ui-view></ui-view>
+
+
+            </div>
+
+
+        </section>
+
+    </article>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+
+
+        <ul class="copyright">
+            <li>&copy; Created by M.Bilal Yousuf </li>
+        </ul>
+
+    </footer>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

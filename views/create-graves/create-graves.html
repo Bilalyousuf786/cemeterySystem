@@ -1,0 +1,12 @@
+
+
+<div ng-controller="CreateGravesController">
+<h1><b>Create Graves</b></h1>
+    <form name="add_new_graves">
+            <input type="text" placeholder="Grave Location" ng-model="ctrl.location" required><br>
+            <input type="text" placeholder="Grave No" ng-model="ctrl.graveNo" required><br>
+
+            <input type="submit" ng-click="ctrl.create_graves()">
+    </form>
+
+</div>

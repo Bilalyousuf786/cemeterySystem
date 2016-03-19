@@ -1,0 +1,81 @@
+
+<div id="page-wrapper" class="contact">
+
+    <!-- Header -->
+
+    <header id="header" class="alt">
+
+        <nav id="nav">
+            <ul>
+
+                <li class="current"><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="grave_availability">Grave Availability</a></li>
+                <li><a ui-sref="sign-In">Sign In</a></li>
+                <li><a ui-sref="nextOfKin">Burial Details</a></li>
+                <li><a ui-sref="cdci">Death Certificate</a></li>
+                <li><a ui-sref="about-us">About Us</a></li>
+                <!--<li><a ui-sref="contact-us">Contact Us</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- Main -->
+    <article id="main">
+
+        <header class="special container">
+            <span class="icon fa-bar-chart-o"></span>
+            <h2>Computerized Death Certificate Issuance</h2>
+
+        </header>
+
+        <!-- One -->
+        <section class="wrapper style4 special container 75%" ng-show="ctrl.cdciForm">
+
+            <!-- Content -->
+            <div class="content">
+
+
+
+        <div style="text-align: left">
+            <h4><b>Applying for Computerized Death Certificate Issuance (CDCI) :</b></h4>
+
+        </div>
+                <form name="certificateIssuance" ng-submit="ctrl.searchBdetails()">
+
+
+                    <div style="text-align: left">
+                        <br>
+                        <label>Enter Key</label>
+                        <input type="text" ng-model="ctrl.burialId" required placeholder="Enter Key">
+                    </div>
+
+                    <br><br>
+
+                    <button type="submit" ng-disabled="certificateIssuance.$invalid">Search</button>
+                </form>
+
+                <div ng-show="ctrl.validId">
+                    <button type="button" ng-click="ctrl.certificateIssue()">Certificate Issuance Request</button>
+                </div>
+
+            </div>
+        </section>
+
+    </article>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+
+        <ul class="copyright">
+            <li>&copy; Created by M.Bilal Yousuf </li>
+        </ul>
+
+    </footer>
+
+</div>
+<ui-view></ui-view>
+
+

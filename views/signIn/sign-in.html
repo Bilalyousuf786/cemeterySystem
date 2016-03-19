@@ -1,0 +1,82 @@
+
+<div id="page-wrapper" class="contact" ng-controller="SignInController">
+
+    <!-- Header -->
+
+    <header id="header" class="alt">
+
+        <nav id="nav">
+            <ul>
+
+                <li class="current"><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="grave_availability">Grave Availability</a></li>
+                <li><a ui-sref="sign-In">Sign In</a></li>
+                <li><a ui-sref="nextOfKin">Burial Details</a></li>
+                <li><a ui-sref="cdci">Death Certificate</a></li>
+                <li><a ui-sref="about-us">About Us</a></li>
+               <!-- <li><a ui-sref="contact-us">Contact Us</a></li>-->
+                <li></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- Main -->
+    <article id="main">
+
+        <header class="special container">
+            <span class="icon fa-bar-chart-o"></span>
+            <h2>The Sign in  form</h2>
+
+        </header>
+
+        <!-- One -->
+        <section class="wrapper style4 special container 75%">
+
+            <!-- Content -->
+            <div class="content">
+                <form name="loginForm">
+                    <div class="row 50%">
+                        <div class="6u 12u(mobile)">
+                            <input type="text" name="email" placeholder="Email" ng-model="ctrl.email"/>
+                        </div>
+
+                        <br><hr>
+                        <div class="6u 12u(mobile)">
+                            <input type="password" name="pass" placeholder="Password" ng-model="ctrl.pass"/>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <div class="12u">
+                            <ul class="buttons">
+                                <li><input type="submit" class="special" value="Submit" ng-click="ctrl.login()"/></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </article>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+
+        <ul class="copyright">
+            <li>&copy; Created by M.Bilal Yousuf </li>
+        </ul>
+
+    </footer>
+
+</div>
+

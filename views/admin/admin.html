@@ -1,0 +1,118 @@
+
+<div id="page-wrapper" class="contact">
+
+    <!-- Main -->
+    <article id="main">
+
+        <header class="special container">
+            <span class="icon fa-bar-chart-o"></span>
+            <h2>Admin Dashboard</h2>
+
+        </header>
+
+        <!-- One -->
+        <section class="wrapper style4 special container 75%">
+
+            <!-- Content -->
+            <div ng-controller="AdminController">
+
+                <div style="text-align: right">
+                    <button ng-click="ctrl.logout()">Logout</button>
+                </div>
+
+
+                <br>
+                <br>
+
+                <div style="text-align: left;">
+
+
+                    <button>
+                        <a ui-sref="admin.create-graveyard">Create Graveyard</a>
+                    </button>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button>
+                        <a ui-sref="admin.create-caretaker">Create Caretaker</a>
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button >
+                        <a ui-sref="admin.caretaker-list">Caretaker List</a>
+                    </button>
+
+
+
+                </div>
+
+                <br>
+                <hr><hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <ui-view></ui-view>
+
+
+            </div>
+
+
+        </section>
+
+    </article>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+
+
+        <ul class="copyright">
+            <li>&copy; Created by M.Bilal Yousuf </li>
+        </ul>
+
+    </footer>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
