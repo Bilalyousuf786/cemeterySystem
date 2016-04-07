@@ -36,25 +36,24 @@ app.controller("nextOfKinctrl", function(firebaseUrl,$firebaseArray,$firebaseObj
     vm.bDetails;
     vm.searchBdetails = function(id)
     {
-        var ref = new Firebase(firebaseUrl+"Graveyard Location/"+vm.gId+"/Occupied_Graves/"+vm.burialId);
-        vm.bDetails = $firebaseObject(ref);
-        vm.bDetails.$loaded().then(function()
-        {
-            vm.bDetails.date = new Date(vm.bDetails.date);
+        vm.hideDetails = true;
+        var ref = new Firebase(firebaseUrl+"Graveyard Location/"+vm.gId+"/Occupied_Graves");
+        ref.orderByChild("cnic").equalTo(vm.burialId).on("value", function(snapshot) {
+           if(snapshot.val())
+           {
+                console.log(snapshot.val());
+               angular.forEach(snapshot.val(), function(value, key){
+                   vm.bDetails = value;
+                   vm.hideDetails = false;
+               });
 
-            if(vm.bDetails.GraveNo != undefined )
-            {
-                vm.hideDetails =false;
-
-            }
+           }
             else
-            {
-                vm.hideDetails =true;
-                alert("No record found!")
-
-            }
-
-        })
+           {
+               vm.hideDetails = true;
+               alert("No record found against this id");
+           }
+        });
     };
 
 });
